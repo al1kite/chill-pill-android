@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment_dose">
+    <fragment
+        android:id="@+id/fragment_dose"
+        android:name="ddwu.com.mobile.finalreport.feature.dose.DoseFragment"
+        android:label="Dose"
+        tools:layout="@layout/fragment_dose" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@+id/fragment_dose_list"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_dose_list"
+        android:name="ddwu.com.mobile.finalreport.feature.dose.DoseListFragment"
+        android:label="Dose List"
+        tools:layout="@layout/fragment_community" />
+
+
+    <fragment
+        android:id="@+id/fragment_alarm"
+        android:name="ddwu.com.mobile.finalreport.feature.alarm.AlarmFragment"
+        android:label="Alarm"
+        tools:layout="@layout/fragment_alarm" />
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="ddwu.com.mobile.finalreport.feature.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/fragment_community"
+        android:name="ddwu.com.mobile.finalreport.feature.community.CommunityFragment"
+        android:label="Community"
+        tools:layout="@layout/fragment_community" />
+
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="ddwu.com.mobile.finalreport.feature.setting.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" >
+
+        <action
+            android:id="@+id/action_setting_to_profile"
+            app:destination="@id/fragment_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="ddwu.com.mobile.finalreport.feature.profile.ProfileFragment"
+        android:label="Profile Fragment"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

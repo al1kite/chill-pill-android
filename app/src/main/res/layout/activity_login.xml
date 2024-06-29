@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="ddwu.com.mobile.finalreport.feature.login.LoginViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".feature.verification.VerificationFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_capsules_25" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="52dp"
+            android:text="CHILL PILL"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="계정이 없을 시 자동 회원가입 됩니다"
+            android:textColor="@color/default_dark" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_text">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:background="@android:color/transparent"
+                android:paddingStart="23dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:singleLine="true"
+                android:hint="Email"
+                android:text="@={viewModel.email}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/background_text">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:paddingStart="23dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:singleLine="true"
+                android:hint="Password"
+                android:text="@={viewModel.password}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/background_text_color"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:onClick="@{() -> viewModel.onLoginButtonClick()}" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
+
